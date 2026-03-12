@@ -6,7 +6,7 @@ interface BaseProps {
     error?: string,
     as?: "input" | "textarea",
     value: string,
-    onChange: React.ChangeEventHandler<HTMLInputElement | HTMLAreaElement>;
+    onChange: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
 
 }
 type InputProps = BaseProps & InputHTMLAttributes<HTMLInputElement>;
