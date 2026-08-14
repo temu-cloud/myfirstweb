@@ -135,7 +135,13 @@ export default function RegisterModal() {
                     </div>
                 </div>
                 
-                <Button variant="outline" icon={<FcGoogle size={22} />} type="button">
+                <Button variant="outline" icon={<FcGoogle size={22} />} type="button" onClick={async () => {
+                    try {
+                        await authClient.signIn.social({ provider: "google" });
+                    } catch {
+                        toast("google sign in failed", { style: { background: "#07191E", color: "#02F5A1", border: "1px solid red" } });
+                    }
+                }}>
                     Continue with Google
                 </Button>
                 
