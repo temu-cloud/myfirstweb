@@ -22,7 +22,7 @@ export default function ListingViewMap({
 
   if (!location) return;
   return (
-    <div className="h-120 overflow-hidden border border-gray-500">
+    <div className="h-120 overflow-hidden border border-[#02F5A1]/20 rounded-xl">
       <MapComponent price={price} center={location?.latlng} />
     </div>
   );

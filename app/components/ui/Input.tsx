@@ -44,7 +44,7 @@ export default function Input({ label, error, name, value, as = "input" ,classNa
                 absolute
                 left-4
                 top-4
-                text-gray-500
+                text-[#02F5A1]/60
                 text-sm
                 transition-all
                 pointer-events-none

@@ -21,7 +21,7 @@ export default async function ListingPage({ listingId }: ListingPageProps) {
   return (
     <div className="max-w-6xl mx-auto">
       {/* header section */}
-      <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold py-2 sm:py-4 text-gray-900 mb-4 leading-tight">
+      <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold py-2 sm:py-4 text-[#02F5A1] mb-4 leading-tight">
         {listing?.title}
       </h2>
 
@@ -41,40 +41,35 @@ export default async function ListingPage({ listingId }: ListingPageProps) {
         <div className="lg:col-span-2">
           {/* hostinfo card */}
           <div className="flex items-center gap-3 rounded-2xl">
-            <div className="relative w-14 h-14 rounded-full overflow-hidden border-4 border-white">
+            <div className="relative w-14 h-14 rounded-full overflow-hidden border-4 border-[#02F5A1]/30">
               {listing.user.image ? (
-                <Image
-                  src={listing.user.image}
-                  alt="the host"
-                  fill
-                  className="object-cover"
-                />
+                <Image src={listing.user.image} alt="the host" fill className="object-cover" />
               ) : (
-                <FaUser className='h-6 w-6 text-gray-400' />
+                <FaUser className='h-6 w-6 text-[#02F5A1]/60' />
               )}
             </div>
 
             <div className="space-y-2">
-              <h2 className="text-lg font-semibold text-gray-800">
+              <h2 className="text-lg font-semibold text-[#02F5A1]">
                 Hosted by {listing.user.name}
               </h2>
 
-             <div className="flex items-center flex-wrap gap-3 text-sm text-neutral-600">
-              <div className="flex items-center gap-2 rounded-full border border-neutral-200 px-3 py-1.5">
-                <LuUsers size={16} className="text-neutral-500"/>
-                <span className="font-medium text-neutral-800">
+             <div className="flex items-center flex-wrap gap-3 text-sm text-[#02F5A1]/70">
+              <div className="flex items-center gap-2 rounded-full border border-[#02F5A1]/20 px-3 py-1.5">
+                <LuUsers size={16} className="text-[#02F5A1]/60"/>
+                <span className="font-medium text-[#02F5A1]">
                   {listing.guestCount} guests
                 </span>
               </div>
-              <div className="flex items-center gap-2 rounded-full border border-neutral-200 px-3 py-1.5">
-                <LuBedDouble size={16} className="text-neutral-500"/>
-                <span className="font-medium text-neutral-800">
+              <div className="flex items-center gap-2 rounded-full border border-[#02F5A1]/20 px-3 py-1.5">
+                <LuBedDouble size={16} className="text-[#02F5A1]/60"/>
+                <span className="font-medium text-[#02F5A1]">
                   {listing.roomCount} rooms
                 </span>
               </div>
-              <div className="flex items-center gap-2 rounded-full border border-neutral-200 px-3 py-1.5">
-                <LuBath size={16} className="text-neutral-500"/>
-                <span className="font-medium text-neutral-800">
+              <div className="flex items-center gap-2 rounded-full border border-[#02F5A1]/20 px-3 py-1.5">
+                <LuBath size={16} className="text-[#02F5A1]/60"/>
+                <span className="font-medium text-[#02F5A1]">
                   {listing.bathroomCount} bath
                 </span>
               </div>
@@ -84,11 +79,10 @@ export default async function ListingPage({ listingId }: ListingPageProps) {
 
           {/* description */}
           <div className="px-2 py-4">
-            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl lg:text-3xl font-bold text-[#02F5A1] mb-4">
               About this space
             </h3>
-
-            <div className="text-gray-700 text-sm leading-relaxed">
+            <div className="text-[#02F5A1]/70 text-sm leading-relaxed">
               <p>{listing.description}</p>
             </div>
           </div>

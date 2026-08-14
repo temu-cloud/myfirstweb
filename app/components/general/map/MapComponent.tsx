@@ -18,7 +18,7 @@ function MapComponent({ center, price }: MapProps) {
         popupAnchor:[0,-42]
     })
     return (
-        <div className="relative w-full h-full overflow-hidden border border-gray-200">
+        <div className="relative w-full h-full overflow-hidden border border-[#02F5A1]/20">
             <MapContainer className="w-full h-full"
              center={center} zoom={center? 8:4} scrollWheelZoom={false}>
                 <TileLayer

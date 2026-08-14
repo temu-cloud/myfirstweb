@@ -74,7 +74,7 @@ function Navbar() {
                   {session.user.image ? (
                     <Image src={session.user.image} alt="avatar" fill className='object-cover' />
                   ) : (
-                    <FaUser className='h-6 w-6 text-gray-400' />
+                    <FaUser className='h-6 w-6 text-[#02F5A1]/60' />
                   )}
 
                 </div>
