@@ -5,7 +5,7 @@ function Logo() {
   return (
     <Link href="/">
         <Image 
-        src="/images/icon-icons.png" 
+        src="/images/log.jpeg" 
         alt="Logo" 
         width={60} 
         height={60} />

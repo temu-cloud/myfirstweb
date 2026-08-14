@@ -48,7 +48,7 @@ function Navbar() {
             <span className='hidden md:block text-sm font-medium text-gray-700 '>any week</span>
             <span className='h-6 w-px bg-gray-300 hidden md:block' />
             <span className='hidden md:block text-sm font-medium text-gray-700 '>add guests</span>
-            <div className='w-8 h-8 text-white rounded-full bg-rose-400 grid place-items-center'>
+            <div className='w-8 h-8 text-white rounded-full bg-green-400 grid place-items-center'>
               <LuSearch size={16} />
             </div>
           </span>
@@ -82,32 +82,32 @@ function Navbar() {
             }
             {/*dropdown menu*/}
             {isMenuOpen && (
-              <div className='absolute top-14 right-0 w-56 bg-pink-200 border border-gray-200 rounded-xl shadow-lg overflow-hidden px-4 py-2 '>
+              <div className='absolute top-14 right-0 w-56 bg-green-200 border border-gray-200 rounded-xl shadow-lg overflow-hidden px-4 py-2 '>
                 <ul className='text-gray-800 text-sm'>
 
                   {
                     session && !isPending && (
                       <>
-                        <li onClick={openCreateListing} className='px-4 py-3 hover:bg-pink-300 cursor-pointer '>airbnb your home</li>
-                        <Link href="/trips"><li className='px-4 py-3 hover:bg-pink-300 cursor-pointer '>my trips</li></Link>
-                        <Link href="/favorites"><li className='px-4 py-3 hover:bg-pink-300 cursor-pointer '>my favorites</li></Link>
-                        <Link href="/reservations"><li className='px-4 py-3 hover:bg-pink-300 cursor-pointer '>my reservations</li></Link>
-                        <Link href="/properties"><li className='px-4 py-3 hover:bg-pink-300 cursor-pointer '>my properties</li></Link>
+                        <li onClick={openCreateListing} className='px-4 py-3 hover:bg-green-300 cursor-pointer '>airbnb your home</li>
+                        <Link href="/trips"><li className='px-4 py-3 hover:bg-green-300 cursor-pointer '>my trips</li></Link>
+                        <Link href="/favorites"><li className='px-4 py-3 hover:bg-green-300 cursor-pointer '>my favorites</li></Link>
+                        <Link href="/reservations"><li className='px-4 py-3 hover:bg-green-300 cursor-pointer '>my reservations</li></Link>
+                        <Link href="/properties"><li className='px-4 py-3 hover:bg-green-300 cursor-pointer '>my properties</li></Link>
                       </>
                     )
                   }
 
-                  <li className='px-4 py-3 hover:bg-pink-300 cursor-pointer '>help center</li>
+                  <li className='px-4 py-3 hover:bg-green-300 cursor-pointer '>help center</li>
                   <div className='border-t border-gray-300 my-2' />
 
 
                   {
                     session ? (
-                      <li onClick={handleLogout} className='px-4 py-3 hover:bg-pink-300 cursor-pointer '>logout</li>
+                      <li onClick={handleLogout} className='px-4 py-3 hover:bg-green-300 cursor-pointer '>logout</li>
                     ) : (
                       <>
-                        <li onClick={() => { OpenRegister() }} className='px-4 py-3 hover:bg-pink-300 cursor-pointer '>sign up</li>
-                        <li onClick={() => { OpenLogin() }} className='px-4 py-3 hover:bg-pink-300 cursor-pointer '> sign in</li>
+                        <li onClick={() => { OpenRegister() }} className='px-4 py-3 hover:bg-green-300 cursor-pointer '>sign up</li>
+                        <li onClick={() => { OpenLogin() }} className='px-4 py-3 hover:bg-green-300 cursor-pointer '> sign in</li>
 
                   </>
                   )

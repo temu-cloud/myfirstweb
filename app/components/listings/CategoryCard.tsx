@@ -30,21 +30,21 @@ export default function CategoryCard({
                 transition-all 
                 duration-200 
                 cursor-pointer
-                hover:border-rose-500
-                hover:bg-rose-50
+                hover:border-green-500
+                hover:bg-green-50
                 `,
                 selected 
-                    ? "border-rose-500 bg-rose-50 text-rose-600" 
+                    ? "border-green-500 bg-green-50 text-green-600" 
                     : "border-gray-200 bg-white text-gray-700"
             )}
         >
             <Icon className={clsx(
                 "w-8 h-8 transition-colors duration-200",
-                selected ? "text-rose-500" : "text-gray-500"
+                selected ? "text-green-500" : "text-gray-500"
             )} />
             <span className={clsx(
                 "text-sm font-medium",
-                selected ? "text-rose-600" : "text-gray-700"
+                selected ? "text-green-600" : "text-gray-700"
             )}>
                 {label}
             </span>

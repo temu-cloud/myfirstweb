@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme{
-    --color-primary:#FF5AF
+    --color-primary:#FF5A5F;
 }
 .leaflet-container{
     z-index:0 !important;
