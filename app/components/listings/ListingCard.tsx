@@ -47,28 +47,26 @@ function ListingCard({ listing,currentUser,hideFavoriteButton,property,reservati
 
         {!hideFavoriteButton && (        <HeartButton listingId={listing.id} currentUser={currentUser}/>)}
       </div>
-      <div className="space-y-1 mt-3 text-sm bg" >
-        <p className="text-gray-500">
-          {
-            location ? `${location.region},${location.label}` : listing.locationValue
-          }
+      <div className="space-y-1 mt-3 text-sm">
+        <p className="text-[#02F5A1]/60">
+          {location ? `${location.region},${location.label}` : listing.locationValue}
         </p>
-        <p className="text-gray-900 truncate">{listing.title}</p>
-         {
-          reservation?(<>
-          <p className="text-gray-500 text-sm">{format(new Date(reservation.startDate),"MM d")}-{" "}{format(new Date(reservation.endDate),"MM d")}</p>
-          <p>${reservation.totalPrice}</p>
-          </>):( <p className="pt-1">
-          <span className="font-semibold">${listing.price}</span> / night
-        </p>)
-         }
-        {
-          property&&(
-            <div className="mt-3">
-              <p className="text-sm text-gray-500">post on {new Date(listing.createdAt).toLocaleDateString()}</p>
-            </div>
-          )
-        }
+        <p className="text-[#02F5A1] truncate">{listing.title}</p>
+        {reservation ? (
+          <>
+            <p className="text-[#02F5A1]/60 text-sm">{format(new Date(reservation.startDate),"MM d")}-{" "}{format(new Date(reservation.endDate),"MM d")}</p>
+            <p className="text-[#02F5A1]">${reservation.totalPrice}</p>
+          </>
+        ) : (
+          <p className="pt-1 text-[#02F5A1]">
+            <span className="font-semibold">${listing.price}</span> / night
+          </p>
+        )}
+        {property && (
+          <div className="mt-3">
+            <p className="text-sm text-[#02F5A1]/60">post on {new Date(listing.createdAt).toLocaleDateString()}</p>
+          </div>
+        )}
                 {trip && reservation && actionLabel && (
           <CancelReservationButton
             actionLabel={actionLabel}

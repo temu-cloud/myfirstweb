@@ -141,13 +141,12 @@ export default function CreateListingModal() {
     return (
         <Modal isOpen={isOpen} onclose={close} title="Create new listing">
             {/* Step indicator */}
-            <div className='mb-7 flex items-center justify-between text-sm text-gray-500'>
-                <span >step {step + 1} of 6</span>
-                <span className='font-medium text-gray-700'>{stepTitle()}  </span>
-
+            <div className='mb-7 flex items-center justify-between text-sm text-[#02F5A1]/60'>
+                <span>step {step + 1} of 6</span>
+                <span className='font-medium text-[#02F5A1]'>{stepTitle()}</span>
             </div>
 
-            <div className='min-h-55 flex items-center justify-center rounded-xl text-gray-400 px-6'>
+            <div className='min-h-55 flex items-center justify-center rounded-xl text-[#02F5A1]/40 px-6'>
                 {
                     step === STEPS.CATEGORY && (
                         <div className='grid grid-cols-2 gap-4 w-full'>
@@ -184,7 +183,7 @@ export default function CreateListingModal() {
                                 onChange={(value) => setLocation(value)}
 
                             />
-                          <div className='h-80 overflow-hidden border'>
+                          <div className='h-80 overflow-hidden border border-[#02F5A1]/20'>
                              <MapComponent 
                            center={location ?.latlng||[51.505, -0.09]}
                            />
@@ -224,7 +223,7 @@ export default function CreateListingModal() {
                          
                            />
  
-                           <p className='text-xs text-gray-400'>short titles work best</p>
+                           <p className='text-xs text-[#02F5A1]/40'>short titles work best</p>
                         </div>
                     )
                 }
