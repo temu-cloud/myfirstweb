@@ -1,7 +1,13 @@
 @import "tailwindcss";
 
 @theme{
-    --color-primary:#FF5A5F;
+    --color-primary:#02F5A1;
+    --color-dark:#07191E;
+}
+
+body {
+    background-color: #07191E;
+    color: #02F5A1;
 }
 .leaflet-container{
     z-index:0 !important;

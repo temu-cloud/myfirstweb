@@ -103,8 +103,8 @@ const validate = () => {
   return (
     <Modal title="Login" isOpen={isloginOpen} onclose={closeLogin}>
         <div className="mb-6 space-y-1">
-                <h2 className="text-2xl font-somibold text-gray-900 ">well come to temubnb</h2>
-                <p className="text-sm text-gray-500">login to an acount </p>
+                <h2 className="text-2xl font-somibold text-[#02F5A1] ">well come to temubnb</h2>
+                <p className="text-sm text-[#02F5A1]/60">login to an acount </p>
 
             </div>
              <form action=""
@@ -115,10 +115,10 @@ const validate = () => {
                             <Button type="submit" loading={loading} disabled={loading}>Continue</Button>
                             <div className="relative my-6">
                                 <div className="absolute inset-0 flex items-center">
-                                    <div className="w-full border-t border-gray-300" />
+                                    <div className="w-full border-t border-[#02F5A1]/20" />
                                 </div>
                                 <div className="relative flex justify-center text-xs uppercase">
-                                    <span className="bg-white px-2 text-gray-500">or</span>
+                                    <span className="bg-[#07191E] px-2 text-[#02F5A1]/60">or</span>
             
                                 </div>
                             </div>
@@ -126,8 +126,8 @@ const validate = () => {
                                     onClick={signInWithGoogle}
                                 icon={<FcGoogle size={22} />}
                                 type="button">Continue with Google</Button>
-                            <p className="text-sm text-center text-gray-500">
-                                Already have an account? <span onClick={OpenRegister} className="text-rose-500 cursor-pointer hover:underline">register</span>
+                            <p className="text-sm text-center text-[#02F5A1]/60">
+                                Already have an account? <span onClick={OpenRegister} className="text-[#02F5A1] cursor-pointer hover:underline">register</span>
                             </p>
                         </form>
     </Modal>

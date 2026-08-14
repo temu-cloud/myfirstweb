@@ -18,7 +18,7 @@ export default function Button({
         <button disabled={disabled} {...props} className={clsx(
             `w-full h-12 font-somibold flex items-center justify-center gap-3 cursor-pointer transition focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 `,
             rounded ? "rounded-full " : "rounded-lg",
-            variant === "primary" && "bg-linear-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600 active:scale-[0.98]", variant === "outline" && "border border-gray-300 bg-white hover:bg-gray-100",
+            variant === "primary" && "bg-[#02F5A1] text-[#07191E] hover:bg-[#00d98e] active:scale-[0.98] font-semibold", variant === "outline" && "border border-[#02F5A1] bg-transparent text-[#02F5A1] hover:bg-[#02F5A1]/10",
             isDisabled && "opacity-70 cursor-not-allowed", className
         )}>
             {loading ? "Loading..." : (

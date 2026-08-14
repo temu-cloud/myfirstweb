@@ -35,20 +35,20 @@ function Navbar() {
    router.refresh();
   }
   return (
-    <nav className='fixed top-0  h-18 lg:h-24  w-full bg-white border-b border-gray-400 z-50'>
+    <nav className='fixed top-0  h-18 lg:h-24  w-full bg-[#07191E] border-b border-[#02F5A1]/20 z-50'>
       <div className='flex items-center justify-between h-full mx-auto w-[95%] md:w-[90%] '>
         <Logo />
         {/* search */}
-        <div onClick={openFilterModal}  className='flex items-center gap-3 px-4 py-2 shadow-md border border-gray-300 rounded-full cursor-pointer '>
-          <span className='text-sm font-medium text-gray-700 flex items-center gap-2'>
+        <div onClick={openFilterModal}  className='flex items-center gap-3 px-4 py-2 shadow-md border border-[#02F5A1]/30 rounded-full cursor-pointer hover:border-[#02F5A1] transition'>
+          <span className='text-sm font-medium text-[#02F5A1] flex items-center gap-2'>
             <Image src="/images/home.png" alt="Home" width={24} height={24} />
-            <span className='h-6 w-px bg-gray-300 hidden md:block' />
-            <span className='hidden md:block text-sm font-medium text-gray-700 '>anywhere</span>
-            <span className='h-6 w-px bg-gray-300 hidden md:block' />
-            <span className='hidden md:block text-sm font-medium text-gray-700 '>any week</span>
-            <span className='h-6 w-px bg-gray-300 hidden md:block' />
-            <span className='hidden md:block text-sm font-medium text-gray-700 '>add guests</span>
-            <div className='w-8 h-8 text-white rounded-full bg-green-400 grid place-items-center'>
+            <span className='h-6 w-px bg-[#02F5A1]/30 hidden md:block' />
+            <span className='hidden md:block text-sm font-medium text-[#02F5A1] '>anywhere</span>
+            <span className='h-6 w-px bg-[#02F5A1]/30 hidden md:block' />
+            <span className='hidden md:block text-sm font-medium text-[#02F5A1] '>any week</span>
+            <span className='h-6 w-px bg-[#02F5A1]/30 hidden md:block' />
+            <span className='hidden md:block text-sm font-medium text-[#02F5A1] '>add guests</span>
+            <div className='w-8 h-8 text-[#07191E] rounded-full bg-[#02F5A1] grid place-items-center'>
               <LuSearch size={16} />
             </div>
           </span>
@@ -61,13 +61,13 @@ function Navbar() {
             session && !isPending && (
               <button 
               onClick={openCreateListing}
-              className='hidden md:block text-sm font-medium px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 '>airbnb your home</button>
+              className='hidden md:block text-sm font-medium px-4 py-2 rounded-full border border-[#02F5A1]/30 text-[#02F5A1] hover:bg-[#02F5A1]/10 transition'>airbnb your home</button>
             )
           }
 
 
-          <div className='flex items-center gap-2 border border-gray-300 rounded-full px-2 py-1 hover:shadow-md transition cursor-pointer '>
-            <button onClick={() => setIsMenuOpen((prev) => !prev)} className='h-8 w-8  gird place-items-center rounded-full hover:bg-gray-100 transition cursor-pointer'> <LuMenu className='h-6 w-6 text-rose-400' /> </button>
+          <div className='flex items-center gap-2 border border-[#02F5A1]/30 rounded-full px-2 py-1 hover:border-[#02F5A1] transition cursor-pointer '>
+            <button onClick={() => setIsMenuOpen((prev) => !prev)} className='h-8 w-8  gird place-items-center rounded-full hover:bg-[#02F5A1]/10 transition cursor-pointer'> <LuMenu className='h-6 w-6 text-[#02F5A1]' /> </button>
             {
               session && (
                 <div className='relative h-8 w-8 rounded-full overflow-hidden'>
@@ -82,32 +82,32 @@ function Navbar() {
             }
             {/*dropdown menu*/}
             {isMenuOpen && (
-              <div className='absolute top-14 right-0 w-56 bg-green-200 border border-gray-200 rounded-xl shadow-lg overflow-hidden px-4 py-2 '>
-                <ul className='text-gray-800 text-sm'>
+              <div className='absolute top-14 right-0 w-56 bg-[#07191E] border border-[#02F5A1]/20 rounded-xl shadow-lg overflow-hidden px-4 py-2 '>
+                <ul className='text-[#02F5A1] text-sm'>
 
                   {
                     session && !isPending && (
                       <>
-                        <li onClick={openCreateListing} className='px-4 py-3 hover:bg-green-300 cursor-pointer '>airbnb your home</li>
-                        <Link href="/trips"><li className='px-4 py-3 hover:bg-green-300 cursor-pointer '>my trips</li></Link>
-                        <Link href="/favorites"><li className='px-4 py-3 hover:bg-green-300 cursor-pointer '>my favorites</li></Link>
-                        <Link href="/reservations"><li className='px-4 py-3 hover:bg-green-300 cursor-pointer '>my reservations</li></Link>
-                        <Link href="/properties"><li className='px-4 py-3 hover:bg-green-300 cursor-pointer '>my properties</li></Link>
+                        <li onClick={openCreateListing} className='px-4 py-3 hover:bg-[#02F5A1]/10 cursor-pointer rounded-lg'>airbnb your home</li>
+                        <Link href="/trips"><li className='px-4 py-3 hover:bg-[#02F5A1]/10 cursor-pointer rounded-lg'>my trips</li></Link>
+                        <Link href="/favorites"><li className='px-4 py-3 hover:bg-[#02F5A1]/10 cursor-pointer rounded-lg'>my favorites</li></Link>
+                        <Link href="/reservations"><li className='px-4 py-3 hover:bg-[#02F5A1]/10 cursor-pointer rounded-lg'>my reservations</li></Link>
+                        <Link href="/properties"><li className='px-4 py-3 hover:bg-[#02F5A1]/10 cursor-pointer rounded-lg'>my properties</li></Link>
                       </>
                     )
                   }
 
-                  <li className='px-4 py-3 hover:bg-green-300 cursor-pointer '>help center</li>
-                  <div className='border-t border-gray-300 my-2' />
+                  <li className='px-4 py-3 hover:bg-[#02F5A1]/10 cursor-pointer rounded-lg'>help center</li>
+                  <div className='border-t border-[#02F5A1]/20 my-2' />
 
 
                   {
                     session ? (
-                      <li onClick={handleLogout} className='px-4 py-3 hover:bg-green-300 cursor-pointer '>logout</li>
+                      <li onClick={handleLogout} className='px-4 py-3 hover:bg-[#02F5A1]/10 cursor-pointer rounded-lg'>logout</li>
                     ) : (
                       <>
-                        <li onClick={() => { OpenRegister() }} className='px-4 py-3 hover:bg-green-300 cursor-pointer '>sign up</li>
-                        <li onClick={() => { OpenLogin() }} className='px-4 py-3 hover:bg-green-300 cursor-pointer '> sign in</li>
+                        <li onClick={() => { OpenRegister() }} className='px-4 py-3 hover:bg-[#02F5A1]/10 cursor-pointer rounded-lg'>sign up</li>
+                        <li onClick={() => { OpenLogin() }} className='px-4 py-3 hover:bg-[#02F5A1]/10 cursor-pointer rounded-lg'> sign in</li>
 
                   </>
                   )

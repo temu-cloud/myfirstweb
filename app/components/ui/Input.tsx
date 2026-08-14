@@ -18,10 +18,11 @@ export default function Input({ label, error, name, value, as = "input" ,classNa
         peer
         w-full
         border
-        bg-white
+        bg-[#07191E]
+        text-[#02F5A1]
         focus:border-2 
         px-4 
-        text-sm outline-none transition disabled:opacity-70`,error ? "border-red-500 focus:border-red-500": "border-gray-400 focus:border-black",
+        text-sm outline-none transition disabled:opacity-70`,error ? "border-red-500 focus:border-red-500": "border-[#02F5A1]/40 focus:border-[#02F5A1]",
         as === "textarea" ? "min-h-[120] pt-6 pb-3 rounded-xl resize-none":"h-14 pt-6 rounded-xl",className
     )
     return (
@@ -52,8 +53,8 @@ export default function Input({ label, error, name, value, as = "input" ,classNa
                 ,
                 hasValue
                 ?
-                "scale-75 -translate-y-3 text-gray-700":
-                "peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-gray-700"
+                "scale-75 -translate-y-3 text-[#02F5A1]":
+                "peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-[#02F5A1] text-[#02F5A1]/60"
             )}>{label}</label>
         </div>
          {
